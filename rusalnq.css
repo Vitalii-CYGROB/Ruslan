@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -63,6 +64,10 @@
     text-align: center;
     background-color: #ECEFF1;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
   }
   .menu__item {
     display: block;
@@ -108,7 +113,7 @@
 }
 .header_right_content{
     background-color: #C9A387;
-    width: 115px;
+    width: 80px;
     height: 703px;
     position: fixed;
     top: 0;
@@ -116,31 +121,34 @@
     margin: 0;
     right: 0px;
   }
-.left_content li{
+.left_content ul li{
     list-style-type: none;
     transform: rotate(-90deg);
     padding: 33px;
 }
-.left_content li:hover{
-    transform: rotate(-0deg);
-    -webkit-transition: 200ms
+.menu__item1, #menu_right ul li a:hover{
+  color: white;
+  border-bottom: solid 2px white;
+  transform: rotate(360deg);
 }
-.left_content a:hover{
-    color: white;
-    border-bottom: solid 2px white;
+.left_content{
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .left_content a{
     text-decoration: none;
     color: #0C0B23;
     font-family: 'Lato', sans-serif;
-    font-size: 12px;
+    font-size: 8px;
     letter-spacing: 1px;
 }
 .right_content{
     display: flex;
     flex-direction: column;
     margin-top: 55px;
-    margin-left: 36px;
+    margin-left: 22px;
 }
 .right_content svg{
     padding: 10px;
@@ -149,7 +157,7 @@
   font-family: 'Lato', sans-serif;
   font-size: 32px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 38px;
     letter-spacing: 0em;
     margin-top: -104px;
@@ -173,6 +181,11 @@ letter-spacing: 0em;
 .about_content_img{
   margin-left: -211px;
 }
+.about_content_img1 img{
+  width: 113px;
+  margin-top: -53px;
+  margin-left: -269px;
+}
 .about_flex{
     display: flex;
     flex-direction: row;
@@ -187,7 +200,7 @@ letter-spacing: 0em;
 .services_flex{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   border-bottom: solid 1px #707070;
   width: 1024px;
 }
@@ -206,7 +219,7 @@ letter-spacing: 0em;
   margin-left: 334px;
 }
 .servisec_text p{
-font-weight: 600;
+font-weight: 900;
 font-size: 24px;
 font-family: 'Lato', sans-serif;
 color: #0C0B23;
@@ -250,7 +263,7 @@ line-height: 150%;
   font-family: 'Lato', sans-serif;
   font-size: 44px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 900;
   line-height: 55px;
   color: white;
 }
@@ -269,12 +282,12 @@ line-height: 150%;
 }
 .gallery_content1_text{
   padding: 79px;
-  margin-left: 272px;
+  margin-left: 372px;
 }
 .gallery_content1 p{
   font-family: 'Lato', sans-serif;
   font-size: 32px;
-  font-weight: 450;
+  font-weight: 700;
   line-height: 38px;
   color: white;
   align-items: center;
@@ -295,16 +308,12 @@ font-family: 'Lato', sans-serif;
 .gallery_content2{
   display: flex;
   flex-wrap: wrap;
-  margin-top: 80px;
-  margin-left: 380px;
-  max-width: 1424px;
-  width: 96%;
-  margin: 0 auto;
+  margin-top: 63px;
+  margin-left: 403px;
 }
 .flex_one{
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
 }
 .flex_one img{
   padding: 20px;
@@ -324,7 +333,7 @@ font-family: 'Lato', sans-serif;
 .contact_tell h2{
   font-family: 'Lato', sans-serif;
   font-size: 32px;
-  font-weight: 450;
+  font-weight: 700;
   line-height: 38px;
   color: white;
 }
@@ -346,7 +355,7 @@ font-family: 'Lato', sans-serif;
 .contact_mail h2{
   font-family: 'Lato', sans-serif;
   font-size: 32px;
-  font-weight: 450;
+  font-weight: 700;
   line-height: 38px;
   text-align: left;  
   color: white;
@@ -375,7 +384,7 @@ font-family: 'Lato', sans-serif;
   margin-left: 272px;
 }
 .content1_text h2{
-  font-weight: 450;
+  font-weight: 700;
   font-size: 32px;
   color: white;
   font-family: 'Lato', sans-serif;
@@ -385,27 +394,32 @@ font-family: 'Lato', sans-serif;
   font-size: 20px;
   width: 160px;
   height: 35px;
-  border: 1px solid #ffffff;
-  opacity: 0.1;
+  background-color: transparent;
+  color: inherit;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: white
 }
 .content1_info{
-  color: white;
+  color: #0C0B23;
 }
 .content_info input{
   font-size: 20px;
   width: 352px;
   height: 35px;
-  border: 1px solid #ffffff;
-  opacity: 0.1;
+  background-color: transparent;
+  color: inherit;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: white
 }
-.content_info{
-  color: white;
-  background-color: #0C0B23;
+input:focus {
+  border-color: blue
 }
 .contnetn2_info button{
 width: 80px;
 height: 40px;
-border: 1px solid #FFFFFF;
+border: 1px solid #C0C0C0;
 box-sizing: border-box;
 border-radius: 40px;
 background-color: #0C0B23;
@@ -478,7 +492,7 @@ color: white;
     width: 282px;
   }
   .services_flex{
-    margin-left: 300px;
+    margin-left: 124px;
   }
 }
 @media (max-width:1500px) {
@@ -875,6 +889,11 @@ color: white;
   margin-left: 113px;
 }
 }
+@media (max-width:795px) {
+  .gallery_content2 {
+    margin-left: 169px;
+  }
+}
 @media (max-width:788px) {
   .about_flex {
     margin-top: 67px;
@@ -904,6 +923,9 @@ color: white;
 .gallery_content1 p {
   font-size: 19px;
   line-height: 28px;
+}
+.about_content_img1 img{
+  margin-left: -126px;
 }
 }
 @media (max-width:751px) {

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="rusalnq.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -22,20 +23,22 @@
               <li><a class="menu__item" href="#">CONTACT</a></li>
             </ul>
           </div>
-    <div class="header_content">
+    <div class="header_content" id="home">
         <div class="header_content_text">
             <p>RUSLAN HRYTSIUTA</p>
             <p>Ready to make.<br>Inspired to create.</p>
         </div> 
         <div class="header_right_content">
             <div class="left_content">
-                <ul>
-                    <li><a href="#"> <b>HOME</b></a></li>
-                    <li><a href="about"> <b>ABOUT</b></a></li>
-                    <li><a href="#"> <b>SERVICES</b></a></li>
-                    <li><a href="#"><b>GALLERY</b> </a></li>
-                    <li><a href="#"> <b>CONTACT</b></a></li>
-                </ul>
+                <div id="menu_right">
+                    <ul>
+                        <li><a class="menu__item1" href="#home">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#services">SERVICES</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="right_content">
                 <a href="https://www.instagram.com/"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +55,7 @@
         </div>
     </div>
     </header>
-    <section class="about">
+    <section class="about" id="about">
         <div class="about_flex">
             <div class="about_content_text1">
                 <p>My name is Ruslan Hrytsiuta. I’m a UX/UI designer since 2020</p>
@@ -65,12 +68,17 @@
                         tortor, ut.</p>
                 </div>
             </div>
-            <div class="about_content_img">
-                <img src="img/image 7.png" alt="">
+            <div class="abot_content_imgg">
+                <div class="about_content_img">
+                    <img src="img/image 7.png" alt="">
+                </div>
+                <div class="about_content_img1">
+                    <img src="img/Linked Path Group.png" alt="">
+                </div>
             </div>
         </div>
     </section>
-        <section class="services">
+        <section class="services" id="services">
             <div class="services_flex">
             <div class="services_right_content">
                 <div class="services_svg">
@@ -199,7 +207,7 @@
                         </div>
                         </div>
             </section>
-            <section class="gallery">
+            <section class="gallery" id="gallery">
                 <div class="gallery_content">
                     <div class="one_img"><img src="img/left.png" alt=""></div>
                     <div class="two_img"><img src="img/right.png" alt=""></div>
@@ -238,7 +246,7 @@
                     </div>
                 </div>
             </section>
-           <footer class="contact">
+           <footer class="contact" id="contact">
             <div class="contact_content">
                 <div class="contact_tell">
                     <h2>Phone</h2>
@@ -262,7 +270,7 @@
                         <form><input name="E-mail" placeholder="E-mail" pattern="[A-Za-z]{15,}"></form> 
                     </div>
                     <div class="contnetn2_info">
-                        <button><a href="#">Send</a></button>
+                        <button><a href="0">Send</a></button>
                     </div>
                 </div>
             </div>
@@ -280,5 +288,45 @@
                 </div>
             </div>
            </footer>
+           <script> 
+            $(document).ready(function () {
+$(document).on("scroll", onScroll);
+
+$('a[href^="#"]').on('click', function (e) {
+    e.preventDefault();
+    $(document).off("scroll");
+    
+    $('a').each(function () {
+        $(this).removeClass('menu__item1');
+    })
+    $(this).addClass('menu__item1');
+  
+    var target = this.hash,
+        menu = target;
+    $target = $(target);
+    $('html, body').stop().animate({
+        'scrollTop': $target.offset().top+2
+    }, 500, 'swing', function () {
+        window.location.hash = target;
+        $(document).on("scroll", onScroll);
+    });
+});
+});
+
+function onScroll(event){
+var scrollPos = $(document).scrollTop();
+$('#menu_right a').each(function () {
+    var currLink = $(this);
+    var refElement = $(currLink.attr("href"));
+    if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        $('#menu_right ul li a').removeClass("menu__item1");
+        currLink.addClass("menu__item1");
+    }
+    else{
+        currLink.removeClass("menu__item1");
+    }
+});
+}
+</script>
 </body>
 </html>
