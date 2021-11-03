@@ -294,6 +294,7 @@ line-height: 150%;
 }
 .gallery_content1_button{
   text-align: center;
+  margin-top: -51px;
 }
 .gallery_content1_button button{
 width: 118px;
