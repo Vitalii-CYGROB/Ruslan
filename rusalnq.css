@@ -131,6 +131,11 @@
   border-bottom: solid 2px white;
   transform: rotate(360deg);
 }
+.menu__item1, #menu_right ul li:hover{
+  color: white;
+  transform: rotate(360deg);
+
+}
 .left_content{
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;

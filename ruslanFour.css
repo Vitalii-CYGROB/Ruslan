@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.services{
+    display: flex;
+    flex-direction: column;
+    margin-top: 178px;
+  }
+  .services_flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: solid 1px #707070;
+    width: 1024px;
+  }
+  .services_svg{
+    margin-left: -190px;
+  }
+  .services_svg img{
+    width: 160px;
+    height: 128px;
+  }
+  .servisec_text{
+    margin-top: -134px;
+  }
+  .services_flex{
+    padding: 48px;
+    margin-left: 334px;
+  }
+  .servisec_text p{
+  font-weight: 900;
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  color: #0C0B23;
+  line-height: 150%;
+  }
+  .servisec_text p1{
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  color: #707070;
+  line-height: 150%;
+  }
+  @media (max-width:1500px) {
+      .services{
+          min-width: 1470px;
+      }
+  }
